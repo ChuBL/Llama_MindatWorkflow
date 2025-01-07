@@ -1,0 +1,2890 @@
+[
+  {
+    "id": "seed_task_0",
+    "input": "User: I want you to plot a network visualization for oxygen minerals with a hardness of less than 8.0.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "User wanted visualization, and the datasets from GEOMATERIAL_COLLECTOR are exclusively compatible with visualization from NETWORK_PLOTTER"
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_1",
+    "input": "User: Can you help me plot a network visualization for all minerals with an optional 'Tetragonal' crystal system?\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_2",
+    "input": "User: Can you help me plot a network visualization for minerals that include 'Fe' and 'Al' but exclude 'S'?\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_3",
+    "input": "User: Can you help me plot a heatmap visualization of the locality data in France?\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/locality_data.json\n        Step 2, Supervisor node: HEATMAP_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "seed_task_4",
+    "input": "User: I want to plot the locality data for Canada in heatmap.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/locality_data.json",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "because the datasets from LOCALITY_COLLECTOR are exclusively compatible with visualization from HEATMAP_PLOTTER"
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_5",
+    "input": "User: i want you to visualize the network of the minerals which hardnees between 2.0 and 7.0\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "User wanted visualization, and the datasets from GEOMATERIAL_COLLECTOR are exclusively compatible with visualization from NETWORK_PLOTTER"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_6",
+    "input": "User: i want you to visualize the all the minerals havs 'Cu' amd 'Fe'\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "Because the datasets from GEOMATERIAL_COLLECTOR are exclusively compatible with visualization from NETWORK_PLOTTER."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "FN",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "FINISH",
+      "is_match": false,
+      "tag": "FN"
+    }
+  },
+  {
+    "id": "seed_task_7",
+    "input": "User: I want to see the heatmap of Canadaa.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/locality_data.json\n        Step 2, Supervisor node: HEATMAP_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "seed_task_8",
+    "input": "User: I want you to plot a hydrothemal visualization for oxygen minerals with hardness less than 8.0",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "I can only handle tasks related to mineral/locality dataset retrieval, mineral network visualization, or locality-based heatmap generation."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_9",
+    "input": "User: I want you to plot all the highways in Japan",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "I can only handle tasks related to mineral/locality dataset retrieval, mineral network visualization, or locality-based heatmap generation."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_10",
+    "input": "User: What's the weather like in Wuhan today?",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "I can only handle tasks related to mineral/locality dataset retrieval, mineral network visualization, or locality-based heatmap generation."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_11",
+    "input": "User: I am happy",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "I can only handle tasks related to mineral/locality dataset retrieval, mineral network visualization, or locality-based heatmap generation."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_12",
+    "input": "User: If x = 5, solve for y in the equation y = 3x + 2",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "I can only handle tasks related to mineral/locality dataset retrieval, mineral network visualization, or locality-based heatmap generation."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_13",
+    "input": "User: eawqaaar,Noxus",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "I can only handle tasks related to mineral/locality dataset retrieval, mineral network visualization, or locality-based heatmap generation."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_14",
+    "input": "User: i wants you to visualize the minerals which hardnees between 4.0 and 5.0\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "because the datasets from GEOMATERIAL_COLLECTOR are exclusively compatible with visualization from NETWORK_PLOTTER"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "FN",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "FINISH",
+      "is_match": false,
+      "tag": "FN"
+    }
+  },
+  {
+    "id": "seed_task_15",
+    "input": "User: i want you to visualize the all the minerals havs 'Ag' amd but not 's'.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "because the datasets from GEOMATERIAL_COLLECTOR are exclusively compatible with visualization from NETWORK_PLOTTER"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "FN",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "FINISH",
+      "is_match": false,
+      "tag": "FN"
+    }
+  },
+  {
+    "id": "seed_task_16",
+    "input": "User: I want to get a heatmap of Cuba.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/locality_data.json\n        Step 2, Supervisor node: HEATMAP_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "seed_task_17",
+    "input": "User: i want you to plot the network of the minerals which hardnees over 6.0\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "because the datasets from GEOMATERIAL_COLLECTOR are exclusively compatible with visualization from NETWORK_PLOTTER"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_18",
+    "input": "User: i want you to show me all the minerals havs 'Zn' amd 'Fe'.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "because the datasets from GEOMATERIAL_COLLECTOR are exclusively compatible with visualization from NETWORK_PLOTTER"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "FN",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "FINISH",
+      "is_match": false,
+      "tag": "FN"
+    }
+  },
+  {
+    "id": "seed_task_19",
+    "input": "User: I want to see the heatmap of Brazil.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/locality_data.json\n        Step 2, Supervisor node: HEATMAP_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "seed_task_20",
+    "input": "User: I want you to plot a network visualization for carbon minerals with a hardness greater than 6.0.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "because the datasets from GEOMATERIAL_COLLECTOR are exclusively compatible with visualization from NETWORK_PLOTTER"
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_21",
+    "input": "User: Can you help me plot a network visualization for all minerals with an optional 'Amorphous' crystal system?\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_22",
+    "input": "User: Can you help me plot a network visualization for minerals that include 'Zn' and 'Pb' but exclude 'C'?\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_23",
+    "input": "User: Can you help me plot a heatmap visualization of the locality data in Peru?\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/locality_data.json\n        Step 2, Supervisor node: HEATMAP_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "seed_task_24",
+    "input": "User: I would like to create a heatmap of the locality data for Germany.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/locality_data.json",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "because the datasets from LOCALITY_COLLECTOR are exclusively compatible with visualization from HEATMAP_PLOTTER"
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_25",
+    "input": "User: Please create a network visualization for oxygen minerals with a hardness between 5.0 and 8.0.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "because the datasets from GEOMATERIAL_COLLECTOR are exclusively compatible with visualization from NETWORK_PLOTTER"
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_26",
+    "input": "User: Could you help me create a network visualization for all minerals with an optional 'Hexagonal' crystal system?\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_27",
+    "input": "User: Can you help me create a network visualization for minerals that contain 'Fe' but exclude 'S' and 'O'?\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_28",
+    "input": "User: Please plot a heatmap visualization of the locality data in Vietnam.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/locality_data.json\n        Step 2, Supervisor node: HEATMAP_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "seed_task_29",
+    "input": "User: I want to plot the locality data for Russia in heatmap.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to /Users/weilinchen/codespace/ollama_project/mindat_data/locality_data.json",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "because the datasets from LOCALITY_COLLECTOR are exclusively compatible with visualization from HEATMAP_PLOTTER"
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_30",
+    "input": "User: I want to know the spatial distribution of ophiolite.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This request cannot be processed. The system only supports two types of data retrieval and visualization:\n 1. Mineral co-occurrence network based on properties, elements, or crystal systems\n 2. Mineral distribution heatmap for a single country"
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "seed_task_31",
+    "input": "User: what is PbSO4?",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This request cannot be processed. The system only supports two types of data retrieval and visualization:\n 1. Mineral co-occurrence network based on properties, elements, or crystal systems\n 2. Mineral distribution heatmap for a single country"
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_32",
+    "input": "User: i want you to plot network visualization for carbon and oxygen mineral but without copper.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Colector node has successfully saved the dataset to path_to_file/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required dataset for the network visualization has been successfully retrieved. The next step is to proceed with NETWORK_PLOTTER to generate the visualization"
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_33",
+    "input": "User: plot a heatmap for locality data in mindat.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "We need a specific country name to conduct the locality data query"
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "seed_task_34",
+    "input": "User: can you plot the locality data for French in heatmap.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to ./locality_data.json\n        Step 2, Supervisor node: HEATMAP_PLOTTER,\n        Step 3, Heatmap plotter node: I have successfully finished the Heatmap request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Because I finished the requested visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_35",
+    "input": "User: can you plot a hetmap for locality data in finland.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to ./locality_data.json",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The required locality dataset for the heatmap visualization has been successfully retrieved. The next step is to proceed with HEATMAP_PLOTTER to generate the visualization."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_36",
+    "input": "User: I want you to plot network visualization for carbon and iron mineral\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required geomaterial dataset for the network visualization has been successfully retrieved. The next step is to proceed with NETWORK_PLOTTER to generate the visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_37",
+    "input": "User: i want you to plot network visualization for magnesium mineral.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the Network request.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "because i should only plot one visualization per request"
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_38",
+    "input": "User: i want you to plot network visualization for Co and S.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required dataset for the network visualization has been successfully retrieved. The next step is to proceed with NETWORK_PLOTTER to generate the visualization"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_39",
+    "input": "User: visualize the mineral networks with hardnesses between 4.0 and 5.0\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to ./mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required dataset for the network visualization has been successfully retrieved. The next step is to proceed with NETWORK_PLOTTER to generate the visualization"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_40",
+    "input": "User: What minerals have a hardness of 6.5?\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to ./mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "I have finished the user's data retrieval request."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_41",
+    "input": "User: Plot the network for minerals with hardness greater than 4.0 and without Ca.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to ./mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required dataset for the network visualization has been successfully retrieved. The next step is to proceed with NETWORK_PLOTTER to generate the visualization"
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_42",
+    "input": "User: Can you help me plot a network visualization for the minerals with an Orthorhombic (o) crystal system?\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to ./geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the Network request.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "because i should plot only one visualization per request"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_43",
+    "input": "User: Could you show me a heatmap of the locality data for Iceland.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to ./mindat_data/locality_data.json,\n        Step 2, Supervisor node: HEATMAP_PLOTTER,\n        Step 3, Heatmap plotter node: I have successfully finished the Heatmap request.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "because i should only plot one visualization per request"
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_44",
+    "input": "User: Help me download the locality data in Iceland.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to ./mindat_data/locality_data.json",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Users are only interested in locality data retrieval."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_45",
+    "input": "User: I would like to see a visualization of Italy's the location data in mindat.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to ./mindat_data/locality_data.json",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The required locality dataset for the heatmap visualization has been successfully retrieved. The next step is to proceed with HEATMAP_PLOTTER to generate the visualization."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_46",
+    "input": "User: Show me minerals with hardness greater than 4.0.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to ./mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Users are only interested in the geomaterial data retrieval."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_47",
+    "input": "User: What are the minerals whose crystal system is Hexagonal\uff1f\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Collector node: The Geomaterial Collector node has successfully saved the dataset to ./mindat_data/geomaterial_data.json",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Users are only interested in the geomaterial data retrieval."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_48",
+    "input": "User: I want to plot the locality data for Russia and Japan in heatmap.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This request cannot be processed. The system only supports two types of data retrieval and visualization:\n 1. Mineral co-occurrence network based on properties, elements, or crystal systems\n 2. Mineral distribution heatmap for a single country"
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "seed_task_49",
+    "input": "User: plot a network for minerals with s, fe and o.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required dataset for the network visualization has been successfully retrieved. The next step is to proceed with NETWORK_PLOTTER to generate the visualization"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_50",
+    "input": "User: I want to visualize the location data of Poland in mindat.\n        Step 0, Supervisor node: LOCALITY_COLLECTOR\n        Step 1, Collector node: The Locality Colector node has successfully saved the dataset to ./mindat_data/locality_data.json",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The required locality dataset for the heatmap visualization has been successfully retrieved. The next step is to proceed with HEATMAP_PLOTTER to generate the visualization."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_51",
+    "input": "User: i want you to visualize for Mg, Fe and O mineral.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the Network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "because i should only plot one visualization per request"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_52",
+    "input": "User: i want you to draw a network for aluminium and silicon mineral.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the Network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "because i should only plot one visualization per request"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_53",
+    "input": "User: please plot a network for the mineral with aluminium and oxygen.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required geomaterial dataset for the network visualization has been successfully retrieved. The next step is to proceed with NETWORK_PLOTTER to generate the visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_54",
+    "input": "User: i would like to see networks for mineral with a Orthorhombic crystal system.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required geomaterial dataset for the network visualization has been successfully retrieved. The next step is to proceed with NETWORK_PLOTTER to generate the visualization."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "seed_task_55",
+    "input": "User: show me minerals that contain iron and have a Tetragonal crystal system.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Users are only interested in the geomaterial data retrieval."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_56",
+    "input": "User: could you show me some mineral with Al, iron.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Users are only interested in the geomaterial data retrieval."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_57",
+    "input": "User: help me download the mineral with magnesium and iron.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Users are only interested in the geomaterial data retrieval."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_58",
+    "input": "User: Please try to visualize minerals with hardness less than 4.0.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the Network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "because i should only plot one visualization per request"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_59",
+    "input": "User: Please use the network diagram to visualize minerals with hardnesses before 4.0 to 7.0 and an optional \u2018Tetragonal\u2019 crystal system.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the Network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "because i should only plot one visualization per request"
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_60",
+    "input": "User: Tell me about the mineral data changes in mindat.org over the years.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The workflow is designed exclusively for the datasets retrieval and visualization requests"
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "seed_task_61",
+    "input": "User: I want you to help me visualize restaurants in France.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The workflow is designed exclusively for the datasets retrieval and visualization requests"
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "seed_task_62",
+    "input": "User: help me to plot a network for the minerals with Zinc and copper.\n        Step 0, Supervisor node: GEOMATERIAL_COLLECTOR\n        Step 1, Geomaterial node: The Geomaterial Colector node has successfully saved the dataset to ./Geomaterial_data.json\n        Step 2, Supervisor node: NETWORK_PLOTTER\n        Step 3, Network plotter node: I have successfully finished the Network request",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "because i should only plot one visualization per request"
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_1",
+    "input": "User: Create a heatmap for mineral occurrences in Canada.\nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Collector node: Data collection successful.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "We have collected the required locality data for visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_4",
+    "input": "User: I want to plot a heatmap of mineral densities in Brazil and Argentina. \n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Only single country heatmap requests are acceptable."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_8",
+    "input": "User: Can you show me localities of minerals with high hardness?\n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This request is invalid as it is conditional and not suitable for current workflows."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_10",
+    "input": "User: I need a heatmap for mineral distribution in Canada.",
+    "output": {
+      "next": "LOCALITY_COLLECTOR",
+      "supervisor_reason": "We need to collect locality data for Canada before visualizing it in the heatmap."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "LOCALITY_COLLECTOR",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_13",
+    "input": "User: Please generate a heatmap for Brazil localities.",
+    "output": {
+      "next": "LOCALITY_COLLECTOR",
+      "supervisor_reason": "I need to gather locality data for Brazil before creating the heatmap."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "LOCALITY_COLLECTOR",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_14",
+    "input": "User: I'd like to visualize the network for minerals with a hardness of 5.5. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR\nStep 1, Collector node: Dataset collected.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The dataset for minerals with the specified hardness is ready, I will now visualize it."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_16",
+    "input": "User: Retrieve information on minerals with a 'Cubic' crystal system. \n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "I need to start data collection for minerals with that crystal system."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_19",
+    "input": "User: Generate a heatmap for locations with high concentrations of quartz. \n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This request is conditional and does not directly match the required parameters for collection."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_21",
+    "input": "User: I'd like to see a heatmap of mineral localities in Brazil.",
+    "output": {
+      "next": "LOCALITY_COLLECTOR",
+      "supervisor_reason": "We need to collect locality data for Brazil before proceeding with the heatmap visualization."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "LOCALITY_COLLECTOR",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_23",
+    "input": "User: Can I get a heatmap for all minerals located within Canada? \nStep 0, Supervisor node: LOCALITY_COLLECTOR \nStep 1, Collector node: Collection in progress",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "We've collected the necessary data for Canada, and it's ready for heatmap visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_24",
+    "input": "User: Plot the mineral network visualization for Cu and Zn.",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "We need to collect data on the minerals first before visualizing the network."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_25",
+    "input": "User: Please create a heatmap for mineral localities in France.",
+    "output": {
+      "next": "LOCALITY_COLLECTOR",
+      "supervisor_reason": "Collecting data for France is the first step before we can generate the heatmap."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "LOCALITY_COLLECTOR",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_26",
+    "input": "User: Can you show the minerals containing Ba? \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR\nStep 1, Collector node: Data collection in progress.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Data collection is still in progress, so we should wait before proceeding."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_29",
+    "input": "User: Can you provide a heatmap showing mineral distributions in Germany? \nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Collector node: Collection complete",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "We've successfully collected locality data for Germany, which allows us to create the heatmap."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_31",
+    "input": "User: Can you visualize the heatmap for mineral distribution in Canada?\nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Collector node: The Locality Collector node has successfully saved the dataset to ./data/locality_data.json.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The required data for the heatmap in Canada has been collected successfully. Proceeding to visualize."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_32",
+    "input": "User: Show me locations of gold deposits in Brazil.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This request contains a conditional query which is not supported by the dataset retrieval system."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_33",
+    "input": "User: Please plot a network visualization for minerals with crystal system 'cubic'.\nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR\nStep 1, Collector node: The Geomaterial Collector node has collected the relevant data.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The dataset for cubic crystals has been successfully collected. Now proceeding to the network visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_36",
+    "input": "User: I would like to visualize minerals with a hardness less than 3.\nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR\nStep 1, Collector node: Successfully gathered the data set.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required dataset for minerals with hardness less than 3 is ready for network visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "FN",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "FINISH",
+      "is_match": false,
+      "tag": "FN"
+    }
+  },
+  {
+    "id": "machine_test_37",
+    "input": "User: Show me the distribution of mineral localities in Spain.\nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Collector node: The Locality Collector has saved the necessary data.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "Locality data for Spain has been successfully retrieved. Proceeding to create a heatmap."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_38",
+    "input": "User: Can you help me visualize the conditions of mineral formations in Africa?",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This conditional query about mineral formations is not supported for data retrieval."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_39",
+    "input": "User: I'd like to show the network connections of minerals with Mg.\nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR\nStep 1, Collector node: Data for minerals with Mg has been collected.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "Data necessary for the network visualization of magnesium-containing minerals has been successfully gathered."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_43",
+    "input": "User: I want to see a heatmap of mineral localities in France. \nStep 0, Supervisor node: LOCALITY_COLLECTOR \nStep 1, Collector node: Data collection complete.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The locality data for France has been successfully collected, allowing for the heatmap visualization."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_44",
+    "input": "User: Please plot a network for minerals containing Si. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR \nStep 1, Collector node: Data collection complete.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The necessary data has been successfully gathered, and we can now visualize the network."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_47",
+    "input": "User: Find me minerals with Mohs hardness less than 3. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The request is completed as users only want the data on specified hardness."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_48",
+    "input": "User: Show me the mineral distribution in high iron areas.\n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The request is invalid; it does not specify an exact locality."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_50",
+    "input": "User: Retrieve minerals containing Titanium. \n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "The request involves retrieving minerals with Titanium, so we need to start with the GEOMATERIAL_COLLECTOR."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_51",
+    "input": "User: Can I see the mineral distribution in Canada? \n",
+    "output": {
+      "next": "LOCALITY_COLLECTOR",
+      "supervisor_reason": "This request is for mineral distribution by country, requiring the LOCALITY_COLLECTOR to gather the data."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "LOCALITY_COLLECTOR",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_52",
+    "input": "User: Create a heatmap of minerals found in Brazil. \nStep 0, Supervisor node: LOCALITY_COLLECTOR \nStep 1, Collector node: Data collection complete.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The relevant locality data has been collected successfully, allowing us to visualize with the HEATMAP_PLOTTER."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_53",
+    "input": "User: Give me a network of titanium and zirconium minerals. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR \nStep 1, Collector node: Data collection complete.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required data set has been retrieved, so we can proceed to visualize it with the NETWORK_PLOTTER."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_55",
+    "input": "User: What minerals are found in areas with high copper concentrations? \n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This request is invalid as it asks for a conditional query, which the system cannot process."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_56",
+    "input": "User: Can you visualize the network for minerals containing iron? \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR \nStep 1, Collector node: Collection completed.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required data has been collected successfully, enabling us to create the network visualization."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_57",
+    "input": "User: I need a heatmap for mineral localities in Japan. \nStep 0, Supervisor node: LOCALITY_COLLECTOR \nStep 1, Collector node: Dataset retrieval completed.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The necessary locality data has been successfully gathered, allowing us to proceed with heatmap visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_59",
+    "input": "User: Identify minerals that contain both {} and {}. \n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Invalid request format as it contains placeholders instead of actual mineral names, preventing data retrieval."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_60",
+    "input": "User: Retrieve mineral records containing copper.\n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "The user is asking for mineral records which requires data collection from GEOMATERIAL_COLLECTOR."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_61",
+    "input": "User: Create a heatmap for mineral localities in Germany.\nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Collector node: Data collection successful.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The LOCALITY_COLLECTOR has successfully collected data, ready for visualization via HEATMAP_PLOTTER."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_63",
+    "input": "User: Show me the localities of minerals in Italy.\n",
+    "output": {
+      "next": "LOCALITY_COLLECTOR",
+      "supervisor_reason": "The user request directly involves collecting locality data, hence we initiate LOCALITY_COLLECTOR."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "LOCALITY_COLLECTOR",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_68",
+    "input": "User: Generate a heatmap for mineral localities in Chile.\nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Collector node: Data collection completed.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The data from LOCALITY_COLLECTOR is ready for visualization through HEATMAP_PLOTTER."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_69",
+    "input": "User: Could you show the minerals that are rarer than 5% abundance?\n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The request is too vague and does not fit the supported actions for data collection or visualization."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_71",
+    "input": "User: I want to visualize the distribution of minerals in Canada. \nStep 0, Supervisor node: LOCALITY_COLLECTOR \nStep 1, Collector node: The locality dataset for Canada has been collected.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The required locality dataset has been retrieved, allowing the visualization of mineral distribution."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_73",
+    "input": "User: Create a heatmap for mineral locations in Brazil. \nStep 0, Supervisor node: LOCALITY_COLLECTOR \nStep 1, Collector node: Locality data collected from Brazil.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The necessary data for generating a heatmap of mineral locations has been gathered."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_80",
+    "input": "User: Can you create a heatmap for mineral localities in Brazil?",
+    "output": {
+      "next": "LOCALITY_COLLECTOR",
+      "supervisor_reason": "The request is valid as it directly asks for mineral localities in a specific country, which allows proceeding to collect the relevant data."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "LOCALITY_COLLECTOR",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_83",
+    "input": "User: Show me minerals containing Si. \n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "I need to start collecting the relevant mineral data."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_84",
+    "input": "User: I want a heatmap for minerals in Brazil. \n",
+    "output": {
+      "next": "LOCALITY_COLLECTOR",
+      "supervisor_reason": "I need to collect locality data for Brazil before creating the heatmap."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "LOCALITY_COLLECTOR",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_89",
+    "input": "User: Please visualize minerals with a chemical composition of 'FeO'. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR \nStep 1, Collector node: Collection completed.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "I can visualize the collected data now."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_90",
+    "input": "User: Show minerals in the hottest regions. \n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This request is invalid as it does not specify a country or locality."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_91",
+    "input": "User: Can you retrieve minerals containing Ca? \n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "The requester is looking for specific mineral data that requires a data collection step first."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_92",
+    "input": "User: Please show me a heatmap for the mineral distribution in Brazil. \nStep 0, Supervisor node: LOCALITY_COLLECTOR \nStep 1, Collector node: Locality data has been collected.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The required locality data has been collected successfully, allowing for heatmap visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_98",
+    "input": "User: Can you visualize the locality data for Italy? \n",
+    "output": {
+      "next": "LOCALITY_COLLECTOR",
+      "supervisor_reason": "Locality data needs to be collected before visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "LOCALITY_COLLECTOR",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_99",
+    "input": "User: Can you retrieve minerals that contain Mo? \n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "This request requires data collection for minerals containing molybdenum, so GEOMATERIAL_COLLECTOR should act next."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_101",
+    "input": "User: I need a heatmap for mineral localities in Canada. \nStep 0, Supervisor node: LOCALITY_COLLECTOR \nStep 1, Collector node: Canada locality data collected.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The locality data has been successfully gathered, and we are ready to create a heatmap for Canada."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_102",
+    "input": "User: Can you show me minerals that have a high density? \n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The request is too generic and not supported. Only specific minerals or locality data can be retrieved."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_103",
+    "input": "User: I would like to see a heatmap of areas with high copper deposits. \n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This query is invalid as it is conditional and doesn't specify a single country."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_105",
+    "input": "User: Can you plot the distribution of minerals in Italy? \nStep 0, Supervisor node: LOCALITY_COLLECTOR \nStep 1, Collector node: Locality data for Italy collected.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "Locality data for Italy has been retrieved successfully, so we can proceed with generating the heatmap."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_106",
+    "input": "User: I want to visualize the network of elements in minerals containing Mg and Ca. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR \nStep 1, Collector node: Dataset successfully saved.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "The required dataset for the requested elements has been successfully collected; we can now visualize this network."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_107",
+    "input": "User: Can you create a heatmap of gold presence in Spain? \n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This request is invalid as it is a conditional query and does not specify a single locality."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_0",
+    "input": "User: Can you retrieve minerals containing Si and Ca? \n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "We need to collect minerals data containing Si and Ca."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_3",
+    "input": "User: Show me a network of minerals with the chemical element 'Cu'.\nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR\nStep 1, Collector node: Data collection complete.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "Data collection is complete, ready to visualize the network."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "NETWORK_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "NETWORK_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_5",
+    "input": "User: Can you visualize minerals from France? \nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Collector node: Data collection complete.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "Data collection is complete, ready to create the heatmap."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_6",
+    "input": "User: Plot the network visualization for all minerals excluding 'K'. \n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "We need specific data collection before visualization can occur."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_11",
+    "input": "User: Show me minerals that contain Mg. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR\nStep 1, Collector node: Data collection complete.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "Mineral data collection has begun, I will proceed to visualize the network of these minerals."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "FN",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "FINISH",
+      "is_match": false,
+      "tag": "FN"
+    }
+  },
+  {
+    "id": "machine_test_15",
+    "input": "User: Show me mineral distribution zones in France. \nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Collector node: Data collection complete.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "Locality data for France is collected, I can now create the heatmap."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_17",
+    "input": "User: I would like to see a heatmap representing mineral occurrences in Germany. \nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Collector node: Data collection complete.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "Data collection for localities in Germany is underway; we can visualize the heatmap after collection."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_20",
+    "input": "User: Can you retrieve minerals containing Ni and Pb? \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR\nStep 1, Collector node: Data collection complete.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The dataset from GEOMATERIAL_COLLECTOR is ready."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_22",
+    "input": "User: Show me all the minerals with the crystal system of Triclinic.",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "The data for Triclinic crystal system minerals need to be collected."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_27",
+    "input": "User: I want to visualize a heatmap of localities for minerals rich in copper. \n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The request is too conditional, as it cannot provide a heatmap without specific country data."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_30",
+    "input": "User: Retrieve minerals containing Cu.\n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "The dataset for minerals containing Cu has been successfully collected."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_34",
+    "input": "User: Can you provide a heatmap of mineral occurrences in Australia?\nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Collector node: The locality collector node has collected the relevant data.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The required locality data for Australia has been successfully collected. Ready to create the heatmap."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_35",
+    "input": "User: What are the mineral changes over the past decade?\n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This request is not supported since it does not pertain to immediate dataset retrieval or visualization tasks."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_40",
+    "input": "User: Can you retrieve minerals containing Zn? \n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "The required dataset has been successfully retrieved."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_41",
+    "input": "User: Show me the distribution of minerals in Germany. \nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Data has been collected",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The locality data for Germany has been collected successfully, enabling the heatmap visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_46",
+    "input": "User: I'm interested in a heatmap for Australia minerals. \nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Data has been collected",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The data collection for Australia has been completed, allowing for visualization with a heatmap."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_54",
+    "input": "User: Show me mineral localities in Germany. \n",
+    "output": {
+      "next": "LOCALITY_COLLECTOR",
+      "supervisor_reason": "The required dataset need to been retrieved."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "LOCALITY_COLLECTOR",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_58",
+    "input": "User: Please retrieve minerals with gold and silver. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR \nStep 1, Collector node: Data collection successful.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The required dataset has been collected."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_62",
+    "input": "User: I would like a network visualization of minerals with a hardness greater than 5.0.\n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "The data collection step hasn't completed yet; the NETWORK_PLOTTER cannot proceed without GEOMATERIAL_COLLECTOR data."
+    },
+    "label": "Casual",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_67",
+    "input": "User: I need to show me a mineral zone in Canada.\n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "This request is invalid as it asks for a conditional query, which the system cannot process."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_72",
+    "input": "User: Show me the minerals containing calcium. \n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "The required dataset on calcium minerals will be collected."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_76",
+    "input": "User: I would like to see the localities for minerals found in Italy. \nStep 0, Supervisor node: LOCALITY_COLLECTOR \nStep 1, Collector node: Locality data for Italy has been gathered.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The necessary locality data for Italy has been collected."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_78",
+    "input": "User: Display a heatmap of precious minerals in countries. \n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The request specifies multiple countries, which cannot be processed as the system requires a single country for locality queries."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_82",
+    "input": "User: Visualize minerals with a crystal system of 'Cubic'. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR\nStep 1, Collector node: Required data has been gathered",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "I can visualize the data as the collection process has started."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "FN",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "FINISH",
+      "is_match": false,
+      "tag": "FN"
+    }
+  },
+  {
+    "id": "machine_test_78",
+    "input": "User: Display a heatmap of precious minerals in countries. \n",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The request specifies multiple countries, which cannot be processed as the system requires a single country for locality queries."
+    },
+    "label": "Invalid",
+    "evaluation_output": {
+      "next": "LOCALITY_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "LOCALITY_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_82",
+    "input": "User: Visualize minerals with a crystal system of 'Cubic'. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR\nStep 1, Collector node: Required data has been gathered",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "I can visualize the data as the collection process has started."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "FN",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "FINISH",
+      "is_match": false,
+      "tag": "FN"
+    }
+  },
+  {
+    "id": "machine_test_87",
+    "input": "User: Generate visualizations for minerals with a hardness greater than 8.0. \n",
+    "output": {
+      "next": "GEOMATERIAL_COLLECTOR",
+      "supervisor_reason": "Before I visualize the data, I need collect the data first."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "GEOMATERIAL_COLLECTOR",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_88",
+    "input": "User: Retrieve minerals found in Australia. \nStep 0, Supervisor node: LOCALITY_COLLECTOR \nStep 1, Collector node: Data collection successful.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The required locality data has been successfully collected."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_93",
+    "input": "User: Visualize the iron content minerals. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR \nStep 1, Collector node: Data collection incomplete.",
+    "output": {
+      "next": "NETWORK_PLOTTER",
+      "supervisor_reason": "Data collection was successful, allowing for the requested network visualization."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "GEOMATERIAL_COLLECTOR"
+    },
+    "evaluation_tag": "FP",
+    "evaluation_details": {
+      "expected_next": "NETWORK_PLOTTER",
+      "predicted_next": "GEOMATERIAL_COLLECTOR",
+      "is_match": false,
+      "tag": "FP"
+    }
+  },
+  {
+    "id": "machine_test_95",
+    "input": "User: Could you show me the minerals with Cu? \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR \nStep 1, Collector node: Data collection complete.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Data collection was successful."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_97",
+    "input": "User: Show me minerals with both Fe and Mg. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR \nStep 1, Collector node: Data collection ongoing.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "Data collection was successful."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_100",
+    "input": "User: Please visualize the mineral distribution in Brazil. \nStep 0, Supervisor node: LOCALITY_COLLECTOR\nStep 1, Collector node: locality data collected.",
+    "output": {
+      "next": "HEATMAP_PLOTTER",
+      "supervisor_reason": "The locality data for Brazil has been collected. Proceeding to visualize it as a heatmap."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "HEATMAP_PLOTTER"
+    },
+    "evaluation_tag": "TP",
+    "evaluation_details": {
+      "expected_next": "HEATMAP_PLOTTER",
+      "predicted_next": "HEATMAP_PLOTTER",
+      "is_match": true,
+      "tag": "TP"
+    }
+  },
+  {
+    "id": "machine_test_104",
+    "input": "User: Show me minerals with Ca. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR\nStep 1, Collector node: Required data has been collected.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The data collection for calcium-containing minerals is complete."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  },
+  {
+    "id": "machine_test_108",
+    "input": "User: I need data on minerals with Ti and Fe. \nStep 0, Supervisor node: GEOMATERIAL_COLLECTOR \nStep 1, Collector node: Data gathering is complete.",
+    "output": {
+      "next": "FINISH",
+      "supervisor_reason": "The required mineral data with titanium and iron has been collected."
+    },
+    "label": "Standard",
+    "evaluation_output": {
+      "next": "FINISH"
+    },
+    "evaluation_tag": "TN",
+    "evaluation_details": {
+      "expected_next": "FINISH",
+      "predicted_next": "FINISH",
+      "is_match": true,
+      "tag": "TN"
+    }
+  }
+]

@@ -1,0 +1,113 @@
+You are asked to create diverse task input and output pairs. These pairs will be used to evaluate a GPT model’s ability to complete tasks aligned with specific geoscience workflows. Use the template, refer to the examples, and adhere to the following guidelines for logical task design.
+
+## Template Structure
+```json
+{
+    "input": "User: [user_request] \n[optional_workflow_steps]",  // User request with some optional step logs
+    "output": {
+        "next": "",        // Next node selection
+        "supervisor_reason": ""  // Decision reasoning
+    },
+    "label": ""           // Request classification
+}
+```
+
+## Core Workflows
+
+## Input Requirements
+
+1. **User Request Format**:
+   - Must start with "User: "
+   - Content should be 1-5 sentences
+   - Style: Either imperative command or question
+      Examples:
+
+      "User: Show me minerals containing Fe."
+      "User: Can you create a heatmap for mineral localities in France?"
+   - Half of the user quest should be followed by workflow steps.
+
+2. **Workflow Steps Format**:
+   - Can include 0 to multiple workflow steps
+   - Each step must follow format:
+   - Step [number], [node_type]: [message]
+
+   - Step numbering:
+
+   - Starts from 0
+   - Increments by 1 for each step
+   - Maximum steps should reference examples provided
+
+
+3. **Node alternation pattern**:
+
+   - Step 0: Always Supervisor node
+   - Step 1: Always Action node
+   - Following steps alternate between Supervisor and Action nodes
+
+4. **Input Variations**:
+   Create diverse combinations of:
+
+   - Inputs with no workflow steps
+   "input": "User: Show minerals containing Fe."
+
+   - Inputs with partial workflow steps
+   "input": "User: Show minerals containing Fe.
+   Step 0, Supervisor node: GEOMATERIAL_COLLECTOR
+   Step 1, Collector node: Data collection complete"
+
+   - Inputs with complete workflow steps
+   "input": "User: Show minerals containing Fe.
+   Step 0, Supervisor node: GEOMATERIAL_COLLECTOR
+   Step 1, Collector node: Data collection complete
+   Step 2, Supervisor node: NETWORK_PLOTTER
+   Step 3, Network plotter node: Visualization complete"
+
+5. **Language Variety**:
+   - Use diverse verbs (show, retrieve, visualize)
+   - Mix formal/casual language styles
+   - Keep inputs under 100 words
+
+## Output Requirements
+
+### Important Data Dependency Rule:
+Visualization nodes (NETWORK_PLOTTER, HEATMAP_PLOTTER) cannot be executed without prior data collection. If workflow logs don't show successful execution of corresponding collector nodes, call the corresponding collector (GEOMATERIAL_COLLECTOR, LOCALITY_COLLECTOR), or return FINISH if the request is invalid for the workflow.
+
+
+### 1. Data Collection & Visualization Paths
+- **Network Visualization Flow**:
+  - Input: Mineral properties/compositions (e.g., hardness, chemical elements, crystal systems)
+  - Flow: GEOMATERIAL_COLLECTOR → NETWORK_PLOTTER
+  - Limitation: Only processes mineral co-occurrence visualization. Cannot handle any other network relationship types
+  - Dependency: NETWORK_PLOTTER should not be called without prior GEOMATERIAL_COLLECTOR data
+
+- **Heatmap Visualization Flow**:
+  - Input: Single country names
+  - Flow: LOCALITY_COLLECTOR → HEATMAP_PLOTTER
+  - Limitations:
+      1. Only accept single country per request
+      2. Important Restriction: LOCALITY_COLLECTOR and HEATMAP_PLOTTER only accept direct country names from the initial user input
+         - Valid: "Mineral records in France", "Canada mineral distribution", "Brazil mineral species"
+         - Invalid: conditional query (e.g. "regions with high iron content", "areas containing gold deposits")
+         - For conditional locality queries: Return FINISH with explanation about system limitations
+   - Dependency: HEATMAP_PLOTTER should not be called without prior LOCALITY_COLLECTOR data
+
+### 2. Valid Values for 'next'
+- Collectors: `GEOMATERIAL_COLLECTOR`, `LOCALITY_COLLECTOR`
+- Visualizers: `NETWORK_PLOTTER`, `HEATMAP_PLOTTER`
+- Completion: `FINISH`
+
+## Response Labels
+- `Standard`: Formal, structured requests
+- `Casual`: Informal, conversational requests
+- `Invalid`: Unsupported/non-geoscience requests
+
+## Technical Notes
+1. Path references should be generic: `/path/to/data.json`
+2. System handles:
+   - Open-ended queries
+   - Conditional data requests
+   - Data-only retrieval
+   - Error cases (invalid requests)
+3. Exclude non-textual outputs or physical actions
+4. All outputs must follow template JSON format
+5. Maximum output length: 100 words
