@@ -27,7 +27,7 @@ This model is hosted on [**Ollama**](https://ollama.com/gene21d4/llama_3.1_instr
 
 ---
 
-### 🚀 **How to Use the Model**
+### **How to Use the Model**
 
 Make sure you have Ollama installed. Then run:
 
